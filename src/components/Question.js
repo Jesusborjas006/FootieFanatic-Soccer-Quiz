@@ -1,5 +1,7 @@
 import { useEffect, useReducer } from "react";
 import Options from "./Options";
+import Loading from "./Loading";
+import Error from "./Error";
 
 const initialState = {
   questions: [],
@@ -9,6 +11,8 @@ const initialState = {
 const reducer = (state, actions) => {
   if (actions.type === "dataRecieved") {
     return { ...state, questions: actions.payload, status: "ready" };
+  } else if (actions.type === "dataFailed") {
+    return { ...state, status: "error" };
   } else if (actions.type === "notReady") {
     return { ...state, status: "loading" };
   }
@@ -18,14 +22,21 @@ const Question = () => {
   const [state, dispatch] = useReducer(reducer, initialState);
   const { questions, status } = state;
 
-  console.log(questions);
+  console.log("status: ", status);
 
   useEffect(() => {
-    dispatch({ type: "notReady" });
     const fetchQuestions = async () => {
-      const response = await fetch("http://localhost:3030/questions");
-      const data = await response.json();
-      dispatch({ type: "dataRecieved", payload: data });
+      try {
+        dispatch({ type: "notReady" });
+        const response = await fetch("http://localhost:8000/questions");
+        if (!response.ok) {
+          dispatch({ type: "dataFailed", payload: "error" });
+        }
+        const data = await response.json();
+        dispatch({ type: "dataRecieved", payload: data });
+      } catch (err) {
+        dispatch({ type: "dataFailed" });
+      }
     };
     fetchQuestions();
   }, []);
@@ -35,8 +46,8 @@ const Question = () => {
       {status === "ready" && (
         <h3 className="text-center mt-10">{questions[0]?.question}</h3>
       )}
-
-      {/* <Options options={questions[0].options} /> */}
+      {status === "loading" && <Loading />}
+      {status === "error" && <Error />}
     </div>
   );
 };
