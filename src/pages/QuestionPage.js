@@ -1,10 +1,11 @@
 import Heading from "../components/Heading";
+import Question from "../components/Question";
 
 const QuestionPage = () => {
   return (
     <div className="">
       <Heading />
-      <p>Question</p>
+      <Question />
     </div>
   );
 };
