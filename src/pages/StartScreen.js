@@ -1,10 +1,11 @@
+import { Link } from "react-router-dom";
 import Heading from "../components/Heading";
 
 const StartScreen = () => {
   return (
     <div className="text-center">
       <Heading />
-      <button className="border px-2 py-1 mt-4">Start Quiz</button>
+      <Link to="/question" className="border px-2 py-1 mt-4 inline-block">Start Quiz</Link>
     </div>
   );
 };
