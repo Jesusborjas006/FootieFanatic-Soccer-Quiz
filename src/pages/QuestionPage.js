@@ -1,6 +1,9 @@
+import Heading from "../components/Heading";
+
 const QuestionPage = () => {
   return (
-    <div>
+    <div className="">
+      <Heading />
       <p>Question</p>
     </div>
   );
