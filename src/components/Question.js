@@ -2,6 +2,7 @@ import { useEffect, useReducer } from "react";
 import Options from "./Options";
 import Loading from "./Loading";
 import Error from "./Error";
+import { Link } from "react-router-dom";
 
 const initialState = {
   questions: [],
@@ -48,12 +49,19 @@ const Question = () => {
         <>
           <h3 className="text-center my-10">{questions[index].question}</h3>
           <Options options={questions[index].options} />
-          <button
-            className="border p-2 px-4 text-center"
-            onClick={() => dispatch({ type: "incrementIndex" })}
-          >
-            Next
-          </button>
+
+          {index < questions.length - 1 ? (
+            <button
+              className="border p-2 px-4"
+              onClick={() => dispatch({ type: "incrementIndex" })}
+            >
+              Next
+            </button>
+          ) : (
+            <Link to="/completed" className="border p-2 px-4">
+              Finish
+            </Link>
+          )}
         </>
       )}
       {status === "loading" && <Loading />}
