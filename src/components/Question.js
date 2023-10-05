@@ -6,6 +6,7 @@ import Error from "./Error";
 const initialState = {
   questions: [],
   status: "loading",
+  index: 0,
 };
 
 const reducer = (state, actions) => {
@@ -15,12 +16,14 @@ const reducer = (state, actions) => {
     return { ...state, status: "error" };
   } else if (actions.type === "notReady") {
     return { ...state, status: "loading" };
+  } else if (actions.type === "incrementIndex") {
+    return { ...state, index: state.index + 1 };
   }
 };
 
 const Question = () => {
   const [state, dispatch] = useReducer(reducer, initialState);
-  const { questions, status } = state;
+  const { questions, status, index } = state;
 
   useEffect(() => {
     const fetchQuestions = async () => {
@@ -43,8 +46,14 @@ const Question = () => {
     <div>
       {status === "ready" && (
         <>
-          <h3 className="text-center my-10">{questions[0].question}</h3>
-          <Options options={questions[0].options} />
+          <h3 className="text-center my-10">{questions[index].question}</h3>
+          <Options options={questions[index].options} />
+          <button
+            className="border p-2 px-4 text-center"
+            onClick={() => dispatch({ type: "incrementIndex" })}
+          >
+            Next
+          </button>
         </>
       )}
       {status === "loading" && <Loading />}
