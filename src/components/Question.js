@@ -22,8 +22,6 @@ const Question = () => {
   const [state, dispatch] = useReducer(reducer, initialState);
   const { questions, status } = state;
 
-  console.log("status: ", status);
-
   useEffect(() => {
     const fetchQuestions = async () => {
       try {
@@ -44,7 +42,10 @@ const Question = () => {
   return (
     <div>
       {status === "ready" && (
-        <h3 className="text-center mt-10">{questions[0]?.question}</h3>
+        <>
+          <h3 className="text-center my-10">{questions[0].question}</h3>
+          <Options options={questions[0].options} />
+        </>
       )}
       {status === "loading" && <Loading />}
       {status === "error" && <Error />}
