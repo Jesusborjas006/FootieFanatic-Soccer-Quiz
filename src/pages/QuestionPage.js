@@ -1,7 +1,7 @@
 import { useEffect, useReducer } from "react";
 import Heading from "../components/Heading";
-import Progress from "../components/Progress";
 import Question from "../components/Question";
+import Footer from "../components/Footer";
 
 const initialState = {
   questions: [],
@@ -43,9 +43,8 @@ const QuestionPage = () => {
   }, []);
 
   return (
-    <div className="">
+    <div>
       <Heading />
-      <Progress index={index} />
       <Question
         questions={questions}
         status={status}

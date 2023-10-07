@@ -5,7 +5,7 @@ import CompleteScreen from "../pages/CompleteScreen";
 
 function App() {
   return (
-    <main>
+    <main className="mt-20 px-5">
       <Routes>
         <Route path="/" element={<StartScreen />} />
         <Route path="/question" element={<QuestionPage />} />
