@@ -1,12 +1,12 @@
 import { useEffect, useReducer } from "react";
 import Heading from "../components/Heading";
 import Question from "../components/Question";
-import Footer from "../components/Footer";
 
 const initialState = {
   questions: [],
   status: "loading",
   index: 0,
+  usersAnswer: null,
 };
 
 const reducer = (state, actions) => {
@@ -17,13 +17,17 @@ const reducer = (state, actions) => {
   } else if (actions.type === "notReady") {
     return { ...state, status: "loading" };
   } else if (actions.type === "incrementIndex") {
-    return { ...state, index: state.index + 1 };
+    return { ...state, index: state.index + 1, usersAnswer: null };
+  } else if (actions.type === "answered") {
+    return { ...state, usersAnswer: actions.payload };
   }
 };
 
 const QuestionPage = () => {
   const [state, dispatch] = useReducer(reducer, initialState);
-  const { questions, status, index } = state;
+  const { questions, status, index, usersAnswer } = state;
+
+  console.log(usersAnswer);
 
   useEffect(() => {
     const fetchQuestions = async () => {
@@ -50,6 +54,7 @@ const QuestionPage = () => {
         status={status}
         index={index}
         dispatch={dispatch}
+        usersAnswer={usersAnswer}
       />
     </div>
   );

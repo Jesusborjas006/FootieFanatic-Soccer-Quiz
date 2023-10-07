@@ -2,7 +2,7 @@ import Options from "./Options";
 import Loading from "./Loading";
 import Error from "./Error";
 
-const Question = ({ questions, status, index, dispatch }) => {
+const Question = ({ questions, status, index, dispatch, usersAnswer }) => {
   return (
     <div className="flex justify-center">
       {status === "ready" && (
@@ -13,6 +13,7 @@ const Question = ({ questions, status, index, dispatch }) => {
             dispatch={dispatch}
             index={index}
             questions={questions}
+            usersAnswer={usersAnswer}
           />
           
         </div>
