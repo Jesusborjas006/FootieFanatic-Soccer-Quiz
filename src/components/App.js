@@ -10,6 +10,7 @@ const initialState = {
   index: 0,
   usersAnswer: null,
   score: 0,
+  allUsersAnswers: [],
 };
 
 const reducer = (state, actions) => {
@@ -29,13 +30,15 @@ const reducer = (state, actions) => {
         actions.payload === state.questions[state.index].correctAnswer
           ? state.score + 1
           : state.score,
+      allUsersAnswers: [...state.allUsersAnswers, actions.payload],
     };
   }
 };
 
 function App() {
   const [state, dispatch] = useReducer(reducer, initialState);
-  const { questions, status, index, usersAnswer, score } = state;
+  const { questions, status, index, usersAnswer, score, allUsersAnswers } =
+    state;
 
   useEffect(() => {
     const fetchQuestions = async () => {
@@ -74,7 +77,13 @@ function App() {
         <Route
           path="/completed"
           element={
-            <CompleteScreen score={score} numOfQuestions={questions.length} />
+            <CompleteScreen
+              score={score}
+              numOfQuestions={questions.length}
+              questions={questions}
+              usersAnswer={usersAnswer}
+              allUsersAnswers={allUsersAnswers}
+            />
           }
         />
       </Routes>
