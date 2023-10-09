@@ -1,6 +1,12 @@
 import Footer from "./Footer";
 
-const Options = ({ options, dispatch, index, questions, usersAnswer }) => {
+const Options = ({
+  options,
+  dispatch,
+  index,
+  questions,
+  usersAnswer,
+}) => {
   return (
     <div className=" flex flex-col items-center space-y-4 w-fit mx-auto relative">
       {options.map((option, index) => (

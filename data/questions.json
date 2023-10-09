@@ -3,22 +3,22 @@
     {
       "question": "Which team has won the most English Premier League titles?",
       "options": ["Liverpool", "Manchester United", "Arsenal", "Chelsea"],
-      "correctAnswer": "Manchester United"
+      "correctAnswer": 1
     },
     {
       "question": "Who is the all-time top scorer in the English Premier League?",
       "options": ["Alan Shearer", "Thierry Henry", "Wayne Rooney", "Andy Cole"],
-      "correctAnswer": "Alan Shearer"
+      "correctAnswer": 0
     },
     {
       "question": "Which EPL club is known as the 'Blues'?",
       "options": ["Manchester City", "Chelsea", "Everton", "Leicester City"],
-      "correctAnswer": "Chelsea"
+      "correctAnswer": 1
     },
     {
       "question": "In which year did the Premier League officially begin?",
       "options": ["1988", "1992", "1996", "2000"],
-      "correctAnswer": "1992"
+      "correctAnswer": 1
     },
     {
       "question": "Who holds the record for the most assists in a single Premier League season?",
@@ -28,7 +28,7 @@
         "Frank Lampard",
         "Cesc Fabregas"
       ],
-      "correctAnswer": "Kevin De Bruyne"
+      "correctAnswer": 0
     },
     {
       "question": "Which Premier League club plays its home matches at Old Trafford?",
@@ -38,12 +38,12 @@
         "Arsenal",
         "Manchester City"
       ],
-      "correctAnswer": "Manchester United"
+      "correctAnswer": 0
     },
     {
       "question": "Which EPL team was famously known as 'The Invincibles' for going unbeaten in the 2003-2004 season?",
       "options": ["Liverpool", "Chelsea", "Manchester United", "Arsenal"],
-      "correctAnswer": "Arsenal"
+      "correctAnswer": 3
     },
     {
       "question": "Who is the youngest player to score a Premier League goal?",
@@ -53,7 +53,7 @@
         "Michael Owen",
         "Cristiano Ronaldo"
       ],
-      "correctAnswer": "James Vaughan"
+      "correctAnswer": 3
     },
     {
       "question": "Which Premier League manager is often referred to as 'The Special One'?",
@@ -63,12 +63,12 @@
         "Carlo Ancelotti",
         "Jose Mourinho"
       ],
-      "correctAnswer": "Jose Mourinho"
+      "correctAnswer": 3
     },
     {
       "question": "In which city is the Premier League club Tottenham Hotspur based?",
       "options": ["Manchester", "Liverpool", "London", "Birmingham"],
-      "correctAnswer": "London"
+      "correctAnswer": 2
     }
   ]
 }

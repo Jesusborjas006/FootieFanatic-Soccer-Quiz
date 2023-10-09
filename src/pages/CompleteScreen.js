@@ -1,15 +1,17 @@
 import Heading from "../components/Heading";
 
-const CompleteScreen = () => {
+const CompleteScreen = ({ score, numOfQuestions }) => {
+  const percentage = (score * 100) / numOfQuestions;
   return (
     <div>
       <Heading />
       <div className="text-center mt-20 text-xl">
         <p className="text-3xl mb-4">
-          <strong>?%</strong>
+          <strong>{percentage}%</strong>
         </p>
         <p>
-          You got <strong>?</strong> out of <strong>?</strong> questions.
+          You got <strong>{score}</strong> out of{" "}
+          <strong>{numOfQuestions}</strong> questions right.
         </p>
       </div>
     </div>
