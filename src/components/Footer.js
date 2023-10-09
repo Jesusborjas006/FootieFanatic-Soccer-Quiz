@@ -9,7 +9,7 @@ const Footer = ({ index, questions, dispatch, usersAnswer }) => {
       {index < questions.length - 1 ? (
         <NextBtn dispatch={dispatch} usersAnswer={usersAnswer} />
       ) : (
-        <FinishBtn />
+        <FinishBtn dispatch={dispatch} usersAnswer={usersAnswer}/>
       )}
     </footer>
   );
