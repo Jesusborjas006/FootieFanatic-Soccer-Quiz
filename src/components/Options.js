@@ -1,18 +1,14 @@
 import Footer from "./Footer";
 
-const Options = ({
-  options,
-  dispatch,
-  index,
-  questions,
-  usersAnswer,
-}) => {
+const Options = ({ options, dispatch, index, questions, usersAnswer }) => {
   return (
     <div className=" flex flex-col items-center space-y-4 w-fit mx-auto relative">
       {options.map((option, index) => (
         <button
           key={index}
-          className="border w-[330px] md:w-[500px] text-left p-4 rounded-2xl hover:border-red-800"
+          className={`border w-[330px] md:w-[500px] text-left p-4 rounded-2xl ${
+            index === usersAnswer ? "bg-purple-500" : ""
+          } ${usersAnswer === 0 || (usersAnswer && "cursor-not-allowed")}`}
           onClick={() => dispatch({ type: "answered", payload: index })}
           disabled={usersAnswer === 0 || usersAnswer}
         >
