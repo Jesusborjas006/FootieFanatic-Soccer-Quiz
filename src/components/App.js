@@ -30,15 +30,15 @@ const reducer = (state, actions) => {
         actions.payload === state.questions[state.index].correctAnswer
           ? state.score + 1
           : state.score,
-      allUsersAnswers: [...state.allUsersAnswers, actions.payload],
+      allUsersAnswers: [...state.allUsersAnswers, actions.payload]
+
     };
   }
 };
 
 function App() {
   const [state, dispatch] = useReducer(reducer, initialState);
-  const { questions, status, index, usersAnswer, score, allUsersAnswers } =
-    state;
+  const { questions, status, index, usersAnswer, score, allUsersAnswers } = state;
 
   useEffect(() => {
     const fetchQuestions = async () => {

@@ -1,5 +1,11 @@
-const QuestionsInfo = ({ questions, usersAnswer, allUsersAnswers }) => {
-  const correctAnswer = questions[0].correctAnswer;
+const QuestionsInfo = ({ questions, allUsersAnswers }) => {
+  const indexOfCorrectAnswer = questions.map((question) => {
+    return question.correctAnswer;
+  });
+
+  const textOfAnswer = questions.map((question, index) => {
+    return question.options[indexOfCorrectAnswer[index]];
+  });
 
   return (
     <table className="mt-10 mx-auto">
@@ -14,8 +20,8 @@ const QuestionsInfo = ({ questions, usersAnswer, allUsersAnswers }) => {
         {questions.map((question, index) => (
           <tr className="border" key={index}>
             <td className="p-2 ">{question.question}</td>
-            <td className="border px-2 ">{question.options[correctAnswer]}</td>
-            <td className="px-2 ">
+            <td className="px-2 border">{textOfAnswer[index]}</td>
+            <td className={`px-2`}>
               {questions[index].options[allUsersAnswers[index]]}
             </td>
           </tr>
