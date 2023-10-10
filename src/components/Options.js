@@ -7,7 +7,7 @@ const Options = ({ options, dispatch, index, questions, usersAnswer }) => {
         <button
           key={index}
           className={`border w-[330px] md:w-[500px] text-left p-4 rounded-2xl bg-black text-white ${
-            index === usersAnswer ? "!bg-white text-black" : ""
+            index === usersAnswer ? "!bg-white !text-black" : ""
           } ${usersAnswer === 0 || (usersAnswer && "cursor-not-allowed")}`}
           onClick={() => dispatch({ type: "answered", payload: index })}
           disabled={usersAnswer === 0 || usersAnswer}
