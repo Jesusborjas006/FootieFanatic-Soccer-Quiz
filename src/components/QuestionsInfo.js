@@ -18,9 +18,9 @@ const QuestionsInfo = ({ questions, allUsersAnswers }) => {
       </thead>
       <tbody>
         {questions.map((question, index) => (
-          <tr className="border" key={index}>
+          <tr className="border text-sm sm:text-base" key={index}>
             <td className="p-2 ">{question.question}</td>
-            <td className="px-2 border">{textOfAnswer[index]}</td>
+            <td className="px-2 border ">{textOfAnswer[index]}</td>
             <td
               className={`px-2 ${
                 textOfAnswer[index] ===

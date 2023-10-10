@@ -30,21 +30,27 @@ const reducer = (state, actions) => {
         actions.payload === state.questions[state.index].correctAnswer
           ? state.score + 1
           : state.score,
-      allUsersAnswers: [...state.allUsersAnswers, actions.payload]
-
+      allUsersAnswers: [...state.allUsersAnswers, actions.payload],
+    };
+  } else if (actions.type === "restart") {
+    return {
+      ...initialState,
+      questions: state.questions,
+      status: "ready",
     };
   }
 };
 
 function App() {
   const [state, dispatch] = useReducer(reducer, initialState);
-  const { questions, status, index, usersAnswer, score, allUsersAnswers } = state;
+  const { questions, status, index, usersAnswer, score, allUsersAnswers } =
+    state;
 
   useEffect(() => {
     const fetchQuestions = async () => {
       try {
         dispatch({ type: "notReady" });
-        const response = await fetch("http://localhost:8000/questions");
+        const response = await fetch("http://localhost:8000/premierLeague");
         if (!response.ok) {
           dispatch({ type: "dataFailed", payload: "error" });
         }
@@ -83,6 +89,7 @@ function App() {
               questions={questions}
               usersAnswer={usersAnswer}
               allUsersAnswers={allUsersAnswers}
+              dispatch={dispatch}
             />
           }
         />
