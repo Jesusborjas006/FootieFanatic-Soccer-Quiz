@@ -3,6 +3,7 @@ import { Route, Routes } from "react-router";
 import StartScreen from "../pages/StartScreen";
 import QuestionPage from "../pages/QuestionPage";
 import CompleteScreen from "../pages/CompleteScreen";
+import questionsData from "../questionsData";
 
 const initialState = {
   questions: [],
@@ -42,8 +43,6 @@ const reducer = (state, actions) => {
       questions: state.questions,
       status: "ready",
     };
-  } else if (actions.type === "changeCategory") {
-    return { ...state, category: actions.payload };
   }
 };
 
@@ -61,7 +60,7 @@ function App() {
           dispatch({ type: "dataFailed", payload: "error" });
         }
         const data = await response.json();
-        dispatch({ type: "dataRecieved", payload: data });
+        dispatch({ type: "dataRecieved", payload: questionsData });
       } catch (err) {
         dispatch({ type: "dataFailed" });
       }

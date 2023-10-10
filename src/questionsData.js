@@ -1,0 +1,74 @@
+const questions = [
+  {
+    question: "Which team has won the most English Premier League titles?",
+    options: ["Liverpool", "Manchester United", "Arsenal", "Chelsea"],
+    correctAnswer: 1,
+  },
+  {
+    question: "Who is the all-time top scorer in the English Premier League?",
+    options: ["Alan Shearer", "Thierry Henry", "Wayne Rooney", "Andy Cole"],
+    correctAnswer: 0,
+  },
+  {
+    question: "Which EPL club is known as the 'Blues'?",
+    options: ["Manchester City", "Chelsea", "Everton", "Leicester City"],
+    correctAnswer: 1,
+  },
+  {
+    question: "In which year did the Premier League officially begin?",
+    options: ["1988", "1992", "1996", "2000"],
+    correctAnswer: 1,
+  },
+  {
+    question:
+      "Who holds the record for the most assists in a single Premier League season?",
+    options: [
+      "Kevin De Bruyne",
+      "Thierry Henry",
+      "Frank Lampard",
+      "Cesc Fabregas",
+    ],
+    correctAnswer: 0,
+  },
+  {
+    question:
+      "Which Premier League club plays its home matches at Old Trafford?",
+    options: ["Manchester United", "Liverpool", "Arsenal", "Manchester City"],
+    correctAnswer: 0,
+  },
+  {
+    question:
+      "Which EPL team was famously known as 'The Invincibles' for going unbeaten in the 2003-2004 season?",
+    options: ["Liverpool", "Chelsea", "Manchester United", "Arsenal"],
+    correctAnswer: 3,
+  },
+  {
+    question: "Who is the youngest player to score a Premier League goal?",
+    options: [
+      "Wayne Rooney",
+      "Raheem Sterling",
+      "Michael Owen",
+      "Cristiano Ronaldo",
+    ],
+    correctAnswer: 3,
+  },
+  {
+    question:
+      "Which Premier League manager is often referred to as 'The Special One'?",
+    options: [
+      "Jurgen Klopp",
+      "Pep Guardiola",
+      "Carlo Ancelotti",
+      "Jose Mourinho",
+    ],
+    correctAnswer: 3,
+  },
+  {
+    question:
+      "In which city is the Premier League club Tottenham Hotspur based?",
+    options: ["Manchester", "Liverpool", "London", "Birmingham"],
+    correctAnswer: 2,
+  },
+];
+
+export default questions;
