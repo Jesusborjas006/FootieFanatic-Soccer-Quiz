@@ -21,7 +21,14 @@ const QuestionsInfo = ({ questions, allUsersAnswers }) => {
           <tr className="border" key={index}>
             <td className="p-2 ">{question.question}</td>
             <td className="px-2 border">{textOfAnswer[index]}</td>
-            <td className={`px-2`}>
+            <td
+              className={`px-2 ${
+                textOfAnswer[index] ===
+                questions[index].options[allUsersAnswers[index]]
+                  ? "text-green-600 font-bold"
+                  : "text-red-600 font-bold"
+              }`}
+            >
               {questions[index].options[allUsersAnswers[index]]}
             </td>
           </tr>
