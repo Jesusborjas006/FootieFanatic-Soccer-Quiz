@@ -1,5 +1,5 @@
 {
-  "premierLeague": [
+  "questions": [
     {
       "question": "Which team has won the most English Premier League titles?",
       "options": ["Liverpool", "Manchester United", "Arsenal", "Chelsea"],
@@ -69,78 +69,6 @@
       "question": "In which city is the Premier League club Tottenham Hotspur based?",
       "options": ["Manchester", "Liverpool", "London", "Birmingham"],
       "correctAnswer": 2
-    }
-  ],
-  "championsLeague": [
-    {
-      "question": "Which club has won the most UEFA Champions League titles?",
-      "options": ["Real Madrid", "FC Barcelona", "Liverpool", "Bayern Munich"],
-      "correctAnswer": 0
-    },
-    {
-      "question": "Who is the all-time top scorer in the UEFA Champions League?",
-      "options": [
-        "Cristiano Ronaldo",
-        "Lionel Messi",
-        "Raul",
-        "Robert Lewandowski"
-      ],
-      "correctAnswer": 0
-    },
-    {
-      "question": "In which year was the UEFA Champions League first held?",
-      "options": ["1956", "1960", "1964", "1968"],
-      "correctAnswer": 0
-    },
-    {
-      "question": "Which club won the inaugural UEFA Champions League in 1956?",
-      "options": [
-        "Real Madrid",
-        "Manchester United",
-        "AC Milan",
-        "FC Barcelona"
-      ],
-      "correctAnswer": 0
-    },
-    {
-      "question": "Who holds the record for the most goals in a single UEFA Champions League season?",
-      "options": [
-        "Lionel Messi",
-        "Cristiano Ronaldo",
-        "Robert Lewandowski",
-        "Raul"
-      ],
-      "correctAnswer": 1
-    },
-    {
-      "question": "Which club has the most consecutive UEFA Champions League titles?",
-      "options": ["Real Madrid", "Bayern Munich", "FC Barcelona", "AC Milan"],
-      "correctAnswer": 0
-    },
-    {
-      "question": "In which city is the UEFA Champions League final typically held?",
-      "options": ["Barcelona", "London", "Istanbul", "Milan"],
-      "correctAnswer": 2
-    },
-    {
-      "question": "Which player has won the UEFA Champions League with three different clubs?",
-      "options": [
-        "Lionel Messi",
-        "Cristiano Ronaldo",
-        "Andres Iniesta",
-        "Clarence Seedorf"
-      ],
-      "correctAnswer": 3
-    },
-    {
-      "question": "Which club is known for the 'Miracle of Istanbul' comeback in the 2005 UEFA Champions League final?",
-      "options": ["AC Milan", "Liverpool", "Chelsea", "Manchester United"],
-      "correctAnswer": 1
-    },
-    {
-      "question": "Who is the youngest player to score in a UEFA Champions League final?",
-      "options": ["Lionel Messi", "Raul", "Karim Benzema", "Kylian Mbappe"],
-      "correctAnswer": 3
     }
   ]
 }

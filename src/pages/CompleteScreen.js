@@ -11,7 +11,7 @@ const CompleteScreen = ({
 }) => {
   const percentage = (score * 100) / numOfQuestions;
   return (
-    <div>
+    <div className="">
       <Heading />
       <div className="text-center mt-10 text-xl">
         <p className="text-3xl mb-4">
@@ -24,17 +24,10 @@ const CompleteScreen = ({
         <div className="space-x-4 mt-4">
           <Link
             to="/question"
-            className="border px-2 py-1"
+            className="border px-3 py-2 mt-4 inline-block text-lg rounded-2xl"
             onClick={() => dispatch({ type: "restart" })}
           >
             Try Again
-          </Link>
-          <Link
-            to="/"
-            className="border px-2 py-1"
-            onClick={() => dispatch({ type: "restart" })}
-          >
-            Different Quiz
           </Link>
         </div>
       </div>

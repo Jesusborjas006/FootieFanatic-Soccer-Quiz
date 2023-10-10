@@ -15,7 +15,11 @@ const initialState = {
 
 const reducer = (state, actions) => {
   if (actions.type === "dataRecieved") {
-    return { ...state, questions: actions.payload, status: "ready" };
+    return {
+      ...state,
+      questions: actions.payload,
+      status: "ready",
+    };
   } else if (actions.type === "dataFailed") {
     return { ...state, status: "error" };
   } else if (actions.type === "notReady") {
@@ -38,6 +42,8 @@ const reducer = (state, actions) => {
       questions: state.questions,
       status: "ready",
     };
+  } else if (actions.type === "changeCategory") {
+    return { ...state, category: actions.payload };
   }
 };
 
@@ -50,7 +56,7 @@ function App() {
     const fetchQuestions = async () => {
       try {
         dispatch({ type: "notReady" });
-        const response = await fetch("http://localhost:8000/premierLeague");
+        const response = await fetch("http://localhost:8000/questions");
         if (!response.ok) {
           dispatch({ type: "dataFailed", payload: "error" });
         }
@@ -66,7 +72,7 @@ function App() {
   return (
     <main className="mt-20 px-5">
       <Routes>
-        <Route path="/" element={<StartScreen />} />
+        <Route path="/" element={<StartScreen dispatch={dispatch} />} />
         <Route
           path="/question"
           element={
