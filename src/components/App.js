@@ -6,7 +6,7 @@ import CompleteScreen from "../pages/CompleteScreen";
 import questionsData from "../questionsData";
 
 const initialState = {
-  questions: [],
+  questions: questionsData,
   status: "loading",
   index: 0,
   usersAnswer: null,
@@ -50,22 +50,31 @@ function App() {
   const [state, dispatch] = useReducer(reducer, initialState);
   const { questions, status, index, usersAnswer, score, allUsersAnswers } =
     state;
+    
+  // useEffect(() => {
+  //   const fetchQuestions = async () => {
+  //     try {
+  //       dispatch({ type: "notReady" });
+  //       const response = await fetch("http://localhost:8000/questions");
+  //       if (!response.ok) {
+  //         dispatch({ type: "dataFailed", payload: "error" });
+  //       }
+  //       const data = await response.json();
+  //       console.log(data);
+  //       dispatch({ type: "dataRecieved", payload: questionsData });
+  //     } catch (err) {
+  //       dispatch({ type: "dataFailed" });
+  //     }
+  //   };
+  //   fetchQuestions();
+  // }, []);
 
   useEffect(() => {
-    const fetchQuestions = async () => {
-      try {
-        dispatch({ type: "notReady" });
-        const response = await fetch("http://localhost:8000/questions");
-        if (!response.ok) {
-          dispatch({ type: "dataFailed", payload: "error" });
-        }
-        const data = await response.json();
-        dispatch({ type: "dataRecieved", payload: questionsData });
-      } catch (err) {
-        dispatch({ type: "dataFailed" });
-      }
+    const getDefaultData = () => {
+      dispatch({ type: "dataRecieved", payload: questionsData });
     };
-    fetchQuestions();
+
+    getDefaultData();
   }, []);
 
   return (
