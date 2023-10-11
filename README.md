@@ -1,70 +1,27 @@
-# Getting Started with Create React App
+# [FootieFanatic:Soccer Quiz](https://footie-fanatic-soccer-quiz.vercel.app/)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Abstract:
+FootieFanatic is a Quiz based on the Premier League of Futbol! This applciation was built using React, Tailwind CSS, and React Router. I created this application to mainly focus and practice on the useReducer hook. User's can view their score at the end and even shows a table with a more detailed info of how they did. Application is also responsive!
 
-## Available Scripts
+## Contributors:
+- Jesus Borjas [LinkedIn](https://www.linkedin.com/in/jesus-borjas-6589b920a/), [Github](https://github.com/jesusborjas006)
 
-In the project directory, you can run:
+## Installation Instructions:
+1. Fork and clone [this repo](https://github.com/Jesusborjas006/footie-fanatic-soccer-quiz).
+1. Copy the SSH key from the green "Code" button.
+1. In your terminal, use the command `git clone git@github.com:[https://github.com/Jesusborjas006/footie-fanatic-soccer-quiz]`.
+1. Run `npm install`.
+1. Do NOT run `npm audit fix --force` when prompted.
+1. Open the repo in your text editor to make any changes or inspect code.
+1. Run `npm start` in your terminal.
+1. Copy and paste the generated `localServer` address that your terminal provides into your browser address bar.
 
-### `npm start`
+## Preview of App:
+<img width="1512" alt="Screenshot 2023-10-10 at 3 56 57 PM" src="https://github.com/Jesusborjas006/FootieFanatic-Soccer-Quiz/assets/111095858/638764f9-2aca-4ebf-89b9-bef5fcde112b">
+<img width="1512" alt="Screenshot 2023-10-10 at 3 57 24 PM" src="https://github.com/Jesusborjas006/FootieFanatic-Soccer-Quiz/assets/111095858/a085e030-4b05-4fc6-94bd-ae7732e19f7c">
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Technologies Used: 
+  - React 
+  - React Router
+  - Tailwind CSS
+  - (useReducer Hook)
